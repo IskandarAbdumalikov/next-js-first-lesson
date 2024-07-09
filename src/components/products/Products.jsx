@@ -27,7 +27,7 @@ const Products = ({ title, slice }) => {
               />
             </Link>
             <div className="products__cards__card__info flex-1 flex flex-col items-center justify-center gap-[30px]">
-              <h3>{el.name}</h3>
+              <Link className="cursor-pointer text-blue-500" href={`/product/${el.id}`}>{el.name}</Link>
               <h2 className="text-green-500">${el.price}</h2>
             </div>
           </div>
