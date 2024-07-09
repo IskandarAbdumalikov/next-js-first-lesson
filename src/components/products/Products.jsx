@@ -1,6 +1,7 @@
 import React from "react";
 import { PRODUCTS__DATA } from "../../static/index";
 import Image from "next/image";
+import Link from "next/link";
 
 const Products = ({ title, slice }) => {
   return (
@@ -13,16 +14,19 @@ const Products = ({ title, slice }) => {
             className="products__cards__card rounded-[10px] shadow-md flex flex-col min-h-[250px] gap-4"
             key={el.id}
           >
-            <div className="products__cards__card__image flex-1 h-1/2 bg-[#f8f7fe]">
+            <Link
+              href={`/product/${el.id}`}
+              className="products__cards__card__image flex-1 h-1/2 bg-[#f8f7fe]"
+            >
               <Image
                 src={el.img}
                 className="w-full h-full object-cover"
                 alt={el.name}
               />
-            </div>
+            </Link>
             <div className="products__cards__card__info flex-1 flex flex-col items-center justify-center gap-[30px]">
               <h3>{el.name}</h3>
-              <h2 className="text-green-500">{el.price}</h2>
+              <h2 className="text-green-500">${el.price}</h2>
             </div>
           </div>
         ))}

@@ -24,9 +24,9 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 py-[25px]">
       <div className="container mx-auto max-w-[1440px] flex justify-between items-center py-4">
-        <div className="header__logo">
+        <Link href={'/'} className="header__logo">
           <Image alt="image" src={logo} width={120} />
-        </div>
+        </Link>
         <ul className="flex gap-8 items-center">
           <select
             name=""
