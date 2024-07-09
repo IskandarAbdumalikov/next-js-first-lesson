@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { PRODUCTS__DATA } from "../../static/index";
 import Image from "next/image";
