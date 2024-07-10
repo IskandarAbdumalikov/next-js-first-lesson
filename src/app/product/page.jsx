@@ -6,6 +6,7 @@ const page = () => {
 
   return (
     <div className="mt-[100px]">
+      salom
      <Footer/>
     </div>
   );
